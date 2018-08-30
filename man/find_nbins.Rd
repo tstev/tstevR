@@ -13,6 +13,9 @@ find_nbins(x, rule = c("FD", "RR", "Scott", "sqrt", "Sturges"),
 \item{rule}{a character string matching to a rule to use to determine
 number of bins.}
 }
+\value{
+an integer with reasonable number of bins.
+}
 \description{
 Compute a reasonable default number of bins based on the data and different
 types of rules.
