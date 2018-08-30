@@ -1,6 +1,4 @@
-#' `tstevR` package
-#'
-#' Someone's Collection of R functions
+#' tstevR: Someone's Collection of R functions
 #'
 #' A non-impressive collection of functions gathered over time. That or a good
 #' excuse to start dabbling in R programming and package building.
