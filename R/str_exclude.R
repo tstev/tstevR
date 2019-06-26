@@ -18,7 +18,7 @@
 #' @seealso [grep()] with argument `invert = TRUE` and `value = TRUE` and
 #'    [stringr::str_detect()] for the function it wraps and for the underlying
 #'    implementation.
-#' @export
+#' @export str_exclude
 #' @examples
 #' fruits <- c("apple", "avocado", "banana")
 #' str_exclude(fruits, "ap")
@@ -31,7 +31,7 @@ str_exclude <- function(string, pattern) {
   }
 }
 
-#' @export
+#' @export str_which_not
 #' @rdname str_exclude
 str_which_not <- function(string, pattern) {
   if (requireNamespace("stringr", quietly = TRUE)) {

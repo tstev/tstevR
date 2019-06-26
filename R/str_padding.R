@@ -1,8 +1,8 @@
 #' Pad a string (with better defaults).
 #'
 #' These functions just wrap around [stringr::str_pad()] with some better
-#' defaults. If `width` is missing it defaults to length of the `string + 1`
-#' for `str_lpad()` and `str_rpad()` and `+ 2` for `str_bpad()`.
+#' defaults (imho). If `width` is missing it defaults to length of the
+#' `string + 1` for `str_lpad()` and `str_rpad()` and `+ 2` for `str_bpad()`.
 #'
 #' @inheritParams stringr::str_pad
 #'
