@@ -1,21 +1,25 @@
 Package: tstevR
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Someone's Collection of R functions
 Version: 0.0.0.9000
-Authors@R: c(
-    person("Tomas", "Stevens", , "t.stevens90@gmail.com", c("aut", "cre", "cph")))
-Description: A collection a useful functions collected over time.
-License: What license is it under?
+Authors@R: person("Tomas", "Stevens", email = "t.stevens90@gmail.com", 
+                  role = c("aut", "cre", "cph"))
+Description: A non-impressive collection of functions gathered over time. That 
+    or a good excuse to start dabbling in R programming and package building.
+License: GPL (>= 2)
 URL: https://github.com/tstev/tstevR
 BugReports: https://github.com/tstev/tstevR/issues
 Depends: 
     R (>= 3.1)
-Imports: 
 Suggests: 
     stringr
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
 Roxygen: list(markdown = TRUE)
-
+LinkingTo: 
+    Rcpp,
+    RcppEigen
+Imports: 
+    Rcpp
