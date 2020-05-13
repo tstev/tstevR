@@ -62,9 +62,11 @@ sparse_lm <- function(X, y, x0, maxiter = 4L * ncol(X),
 
   # Check convergance
   if (isTRUE(fit[["itr"]] == maxiter)) {
-    msg <- paste0("Maximum iterations (", fit[["itr"]],
-                  ") reached with a relative",
-                  " error of ", fit[["error"]])
+    msg <- paste0(
+      "Maximum iterations (", fit[["itr"]],
+      ") reached with a relative",
+      " error of ", fit[["error"]]
+    )
     warning(msg, call. = FALSE)
   }
 
