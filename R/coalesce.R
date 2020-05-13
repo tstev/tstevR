@@ -14,10 +14,9 @@
 #' @examples
 #' coalesce(c("A", "B", NA, "D"), c("A", "B", "C", "D"))
 #' coalesce(NA, NA, 3)
-#' coalesce(c(1,NA,NA), c(NA,2))
-#'
+#' coalesce(c(1, NA, NA), c(NA, 2))
 #' @export coalesce
-coalesce <- function (...) {
+coalesce <- function(...) {
   if (missing(..1)) {
     stop("At least one argument must be supplied", call. = FALSE)
   }

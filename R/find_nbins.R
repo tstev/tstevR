@@ -35,11 +35,12 @@ find_nbins <- function(x, rule = c("FD", "RR", "Scott", "sqrt", "Sturges"),
 
   # Different methods (defaults to Scott method)
   res <- switch(rule,
-                "sqrt" = sqrt(n),
-                "Scott" = (max_x - min_x) / (3.5 * sd_x / n^(1/3)),
-                "FD" = (max_x - min_x) / (2 * stats::IQR(x) / n^(1/3)),
-                "Sturges" = log2(n) + 1,
-                "RR"= 2*(n^(1/3)),
-                (max_x - min_x) / (3.5 * sd_x / n^(1/3)))
+    "sqrt" = sqrt(n),
+    "Scott" = (max_x - min_x) / (3.5 * sd_x / n^(1 / 3)),
+    "FD" = (max_x - min_x) / (2 * stats::IQR(x) / n^(1 / 3)),
+    "Sturges" = log2(n) + 1,
+    "RR" = 2 * (n^(1 / 3)),
+    (max_x - min_x) / (3.5 * sd_x / n^(1 / 3))
+  )
   ceiling(res)
 }

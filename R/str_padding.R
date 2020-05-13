@@ -23,20 +23,20 @@ NULL
 #' @rdname str_padding
 #' @export str_lpad
 str_lpad <- function(string, width, pad = " ") {
-  if(missing(width)) width <- stringr::str_count(string) + 1L
+  if (missing(width)) width <- stringr::str_count(string) + 1L
   stringr::str_pad(string = string, width = width, side = "left", pad = pad)
 }
 
 #' @rdname str_padding
 #' @export str_rpad
 str_rpad <- function(string, width, pad = " ") {
-  if(missing(width)) width <- stringr::str_count(string) + 1L
+  if (missing(width)) width <- stringr::str_count(string) + 1L
   stringr::str_pad(string = string, width = width, side = "right", pad = pad)
 }
 
 #' @rdname str_padding
 #' @export str_bpad
 str_bpad <- function(string, width, pad = " ") {
-  if(missing(width)) width <- stringr::str_count(string) + 2L
+  if (missing(width)) width <- stringr::str_count(string) + 2L
   stringr::str_pad(string = string, width = width, side = "both", pad = pad)
 }

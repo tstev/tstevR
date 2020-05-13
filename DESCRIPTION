@@ -16,11 +16,11 @@ BugReports: https://github.com/tstev/tstevR/issues
 Depends: 
     R (>= 3.1)
 Imports: 
-    Rcpp,
     Matrix,
-    stringr,
+    methods,
+    Rcpp,
     stats,
-    methods
+    stringr
 Suggests: 
     knitr
 LinkingTo: 
