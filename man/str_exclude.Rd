@@ -29,6 +29,10 @@ wrapper around \code{which(str_detect(x, pattern))}, and is equivalent to
 If the \code{stringr} package is installed it is vectorized over \code{string} and
 \code{pattern}. Otherwise \code{\link[base:grep]{base::grep()}} is used which is not vectorized over
 \code{pattern} and only the first element is used.
+
+As of \verb{stringr >= 1.4.0} the function \code{\link[stringr:str_subset]{stringr::str_subset()}} gained a
+\code{negate} argument, rendering this function obsolete, unnecessary and
+convoluted. Well there you are - c'est la vie.
 }
 \examples{
 fruits <- c("apple", "avocado", "banana")
@@ -36,7 +40,7 @@ str_exclude(fruits, "ap")
 str_which_not(fruits, "^a")
 }
 \seealso{
-\code{\link[=grep]{grep()}} with argument \code{invert = TRUE} and \code{value = TRUE} and
+\code{\link[base:grep]{base::grep()}} with argument \code{invert = TRUE} and \code{value = TRUE} and
 \code{\link[stringr:str_detect]{stringr::str_detect()}} for the function it wraps and for the underlying
 implementation.
 }

@@ -10,15 +10,17 @@
 #' @param last a string to seperate last element.
 #'
 #' @return a character string.
-#' @export
+#' @importFrom stringr str_c
+#' @export str_list
 #'
 #' @examples
 #' shopping_list <- c("bread", "milk", "eggs")
 #' str_list(shopping_list)
 str_list <- function(string, sep = ", ", last = " and ") {
   # Coerce to make sure it is a character vector
-  x <- as_character(string)
+  x <- as.character(string)
   if(length(x) == 1L) return(x)
-  str_c(c(str_c(x[1:length(x)-1L], collapse = sep), x[length(x)]),
-        collapse = last)
+  stringr::str_c(c(stringr::str_c(x[1:length(x)-1L], collapse = sep),
+                   x[length(x)]),
+                 collapse = last)
 }

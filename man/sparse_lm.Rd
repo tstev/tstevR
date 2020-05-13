@@ -4,7 +4,7 @@
 \alias{sparse_lm}
 \title{Fit Linear Model using sparse matrices}
 \usage{
-sparse_lm(X, y, x0, maxiter, tol)
+sparse_lm(X, y, x0, maxiter = 4L * ncol(X), tol = .Machine$double.eps)
 }
 \arguments{
 \item{X}{a sparse matrix of the class \code{\link[Matrix]{dgCMatrix-class}}.}
@@ -15,7 +15,7 @@ sparse_lm(X, y, x0, maxiter, tol)
 If it's not provided it will default to a zero-vector.}
 
 \item{maxiter}{an integer scalar with the maximum number of iterations.
-A good choice is usually \code{4 * ncol(X)}. Defaults to \code{10000L}.}
+A good choice is usually \code{4 * ncol(X)}.}
 
 \item{tol}{a numeric scalar with the relative error tolerance.}
 }
@@ -29,10 +29,10 @@ A list with the elements
 \item{residuals}{The vector with the residuals.}
 }
 \description{
-\code{sparse_lm} uses sparse matrices and a iterative solver to fit linear
-models. The sparse iterative solvers are from the \code{Eigen} C++
-library. Currently, only the Conjugate Gradient algorithm has been
-implemented with a diagonal preconditioner.
+\code{sparse_lm} uses sparse matrices and a iterative solver to fit linear models.
+The sparse iterative solvers are from the \code{Eigen} C++ library.
+Currently, only the Conjugate Gradient algorithm has been implemented with
+a diagonal preconditioner.
 }
 \seealso{
 See

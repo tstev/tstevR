@@ -19,7 +19,7 @@ an interpolated character string.
 \description{
 This is a wrapper function around \code{\link[stringr:str_interp]{stringr::str_interp()}} and
 \code{\link[stringr:str_c]{stringr::str_c()}}. It aids in creating useful messages which can
-be passed to \code{\link[=base:warning]{base:warning()}} or \link[base:stop]{base::stop}, for example, or other
+be passed to \code{\link[base:warning]{base::warning()}} or \code{\link[base:stop]{base::stop()}}, for example, or other
 logging functions.
 }
 \examples{

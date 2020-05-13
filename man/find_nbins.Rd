@@ -4,14 +4,16 @@
 \alias{find_nbins}
 \title{Compute a reasonable default number of bins.}
 \usage{
-find_nbins(x, rule = c("FD", "RR", "Scott", "sqrt", "Sturges"),
-  na_rm = TRUE)
+find_nbins(x, rule = c("FD", "RR", "Scott", "sqrt", "Sturges"), na_rm = TRUE)
 }
 \arguments{
 \item{x}{a numeric vector.}
 
 \item{rule}{a character string matching to a rule to use to determine
 number of bins.}
+
+\item{na_rm}{logical whether to remove (\code{TRUE}) missing values or not
+(\code{FALSE})}
 }
 \value{
 an integer with reasonable number of bins.
@@ -29,7 +31,6 @@ find_nbins(rnorm(1000), "sqrt")
 \seealso{
 The following
 \href{https://en.wikipedia.org/wiki/Histogram#Number_of_bins_and_width}{wiki}
-for a discussion on different "rules-of-thumb". Additionally,
-\code{\link[bigvis:find_width]{bigvis::find_width()}} and \code{\link[bigvis:find_origin]{bigvis::find_origin()}} for more reasonable
-defaults.
+for a discussion on different "rules-of-thumb". Additionally, the
+\href{https://github.com/hadley/bigvis}{bigvis} package and sources therein.
 }

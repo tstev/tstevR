@@ -4,7 +4,7 @@
 //' Conjugate Gradient solver for Sparse Matrices.
 //'
 //' Using the iterative Conjugate Gradient Solver from the Eigen C++ library
-//' it solves a linear system \code{A * x = b}. Currently, it uses a diagonal
+//' it solves a linear system `A * x = b`. Currently, it uses a diagonal
 //' preconditioner.
 //'
 //' @param A Sparse double matrix of class \linkS4class{dgCMatrix}.
@@ -14,7 +14,7 @@
 //' @param maxiter Integer scalar that sets the maximum number of iterations
 //'     allowed by the solver. Default is 10,000.
 //' @param tol Sets the tolerance threshold (upper bound to the relative
-//'     residual error) used by the stopping criteria. Default is \code{1e-6}.
+//'     residual error) used by the stopping criteria.
 //' @return \code{sparse_cg} returns a list with several components:
 //'     \item{coefficients}{a vector with the estimated coefficients}
 //'     \item{itr}{a scalar denoting the number of iterations at convergence}

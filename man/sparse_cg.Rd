@@ -18,7 +18,7 @@ is known a vector of zeros with length of \code{b} can be passed.}
 allowed by the solver. Default is 10,000.}
 
 \item{tol}{Sets the tolerance threshold (upper bound to the relative
-residual error) used by the stopping criteria. Default is \code{1e-6}.}
+residual error) used by the stopping criteria.}
 }
 \value{
 \code{sparse_cg} returns a list with several components:

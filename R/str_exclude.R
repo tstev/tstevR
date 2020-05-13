@@ -10,14 +10,20 @@
 #' `pattern`. Otherwise [base::grep()] is used which is not vectorized over
 #' `pattern` and only the first element is used.
 #'
+#' As of `stringr >= 1.4.0` the function [stringr::str_subset()] gained a
+#' `negate` argument, rendering this function obsolete, unnecessary and
+#' convoluted. Well there you are - c'est la vie.
+#'
 #' @param string a input vector that is coercible to a character vector.
 #' @param pattern pattern to look for and exclude.
 #'
 #' @return a character or integer vector for `str_exclude` and `str_which_not`,
 #'    respectively.
-#' @seealso [grep()] with argument `invert = TRUE` and `value = TRUE` and
+#' @seealso [base::grep()] with argument `invert = TRUE` and `value = TRUE` and
 #'    [stringr::str_detect()] for the function it wraps and for the underlying
 #'    implementation.
+#'
+#' @importFrom stringr str_detect
 #' @export str_exclude
 #' @examples
 #' fruits <- c("apple", "avocado", "banana")

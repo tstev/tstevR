@@ -1,9 +1,9 @@
-#' Check if a \code{R} object is indeed empty
+#' Check if a `R` object is indeed empty
 #'
-#' A helper function to check whether a \code{R} object is indeed empty mostly
+#' A helper function to check whether a `R` object is indeed empty mostly
 #' used internally.
 #'
-#' @param x a \code{R} object
+#' @param x a `R` object
 #' @param trim a logical scalar which controls to trim leading and trailing
 #'  whitespaces with a character input.
 #'
@@ -20,6 +20,7 @@
 #' is_empty(0)
 #' is_empty(numeric(0))
 #' @export is_empty
+#' @importFrom stringr str_trim str_count
 is_empty <- function(x, trim = TRUE) {
   if (length(x) <= 1L) {
     if (is.null(x))
@@ -28,7 +29,8 @@ is_empty <- function(x, trim = TRUE) {
       return (TRUE)
     if (is.na(x) || is.nan(x))
       return (TRUE)
-    if (is.character(x) && str_count(ifelse(trim, str_trim(x), x)) == 0)
+    if (is.character(x) && stringr::str_count(
+      ifelse(trim, stringr::str_trim(x), x)) == 0)
       return (TRUE)
     if (is.logical(x) && !isTRUE(x))
       return (TRUE)
